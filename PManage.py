@@ -18,8 +18,14 @@ def retreive():
     label_3.place(relheight=0.1, relwidth=0.8, relx=0.13, rely=0.3)
     for stock in stocks:
         stock=stock.strip()
+        if stock.lower()=="google":
+            stock="GOOG"
+        elif stock.lower()=="amazon":
+            stock="AMZN"
+        elif stock.lower()=="facebook":
+            stock="FB"
         print(stock)
-
+    
 
 label_0=Label(canvas, text="Smart Portfolio Management System", width=20, font=("bold",20))
 label_0.place(relheight=0.1, relwidth=0.8, relx=0.1, rely=0.1)
@@ -36,3 +42,4 @@ predict_btn=tk.Button(root, text="Get Result" , fg="white", bg="#263d42", padx=1
 predict_btn.place(relx=0.48, rely=0.9)
 
 root.mainloop()
+
