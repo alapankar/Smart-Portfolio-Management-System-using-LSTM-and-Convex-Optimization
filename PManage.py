@@ -12,13 +12,13 @@ canvas=tk.Canvas(root, height=600, width=900)
 canvas.pack()
 
 def retreive():
+    stocks=[]
+    stocks=stock_entry.get().split(',')
     label_3=Label(canvas, text="You have selected "+stock_entry.get()+" stocks", width=20, font=("bold",10))
     label_3.place(relheight=0.1, relwidth=0.8, relx=0.13, rely=0.3)
-    var 
-
-
-
-
+    for stock in stocks:
+        stock=stock.strip()
+        print(stock)
 
 
 label_0=Label(canvas, text="Smart Portfolio Management System", width=20, font=("bold",20))
@@ -36,4 +36,3 @@ predict_btn=tk.Button(root, text="Get Result" , fg="white", bg="#263d42", padx=1
 predict_btn.place(relx=0.48, rely=0.9)
 
 root.mainloop()
-
